@@ -25,7 +25,7 @@
 
    def validate_three_digits(value):
       if value < 0 or value > 999:
-        raise ValidationError('Ensure this value is between 0 and 999.')
+        raise ValidationError('Asegurate de que el valor esté entre 0 y 999.')
 
    class Item(models.Model):
       s_name = models.CharField(max_length=100)

@@ -5,14 +5,14 @@ Descripción breve de aplicación.
 ## Índice
 
 - [FAQ](docs/Faq.md)
-- [Instalación](INSTALACION.md)
+- [Instalación](docs/Instalacion.md)
 - [Uso](USO.md)
 
 ## Instalación
 
 Instrucciones básicas de instalación.
 
-Para más detalles, consulta la [guía de instalación](INSTALACION.md).
+Para más detalles, consulta la [guía de instalación](docs/Instalacion.md).
 
 ## Construcción
 
