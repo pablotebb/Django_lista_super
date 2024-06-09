@@ -13,6 +13,19 @@ python -m venv entornoSuper
 source entornoSuper/bin/activate # En Windows usa: entornoSuper\Scripts\activate
 ```
 
-3. Realiza las migraciones
+3. Instalamos Django (si no hay dependencias) y si no hacemos las dependencias (si tenemos el archivo requirements.txt)
 
-> python manage.py migrate
+> pip install django
+> <br />
+> pip install -r requirements.txt
+
+4.  Realizamos las migraciones
+
+```python
+python manage.py makemigrations appSuper
+python manage.py migrate
+```
+
+5. Lanzamos la aplicación:
+
+> python manage.py runserver

@@ -12,7 +12,7 @@
 
    ```python
    INSTALLED_APPS = [
-   'appSuper',
+    'appSuper.apps.AppsuperConfig',
    ...
    ]
    ```
