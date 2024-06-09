@@ -5,9 +5,11 @@ import sys
 
 
 def main():
+    # Establece la configuración predeterminada de Django para el proyecto.
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'proyectoSuper.settings')
     try:
+        # Importa y ejecuta el comando de gestión de Django.
         from django.core.management import execute_from_command_line
     except ImportError as exc:
         raise ImportError(

@@ -11,6 +11,8 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
+# Establece la configuración del módulo Django.
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'proyectoSuper.settings')
 
+# Obtiene la aplicación WSGI para desplegar.
 application = get_wsgi_application()

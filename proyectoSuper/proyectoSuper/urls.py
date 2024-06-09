@@ -18,7 +18,9 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
+    # URL para la vista principal de la aplicación 'appSuper'.
     path('', include('appSuper.urls')),
+    # URL para acceder a la interfaz de administración.
     path('admin/', admin.site.urls),
 ]
 
