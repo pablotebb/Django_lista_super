@@ -24,11 +24,16 @@
           <h2>Formulario</h2>
           <!-- Formulario para agregar un nuevo elemento -->
           <form method="post">
-            {% csrf_token %} <!-- Token CSRF para proteger el formulario contra ataques CSRF -->
-            <div class="form-group">{{ form.s_name }}</div> <!-- Campo para el nombre del ítem -->
-            <div class="form-group">{{ form.d_price }}</div> <!-- Campo para el precio del ítem -->
-            <div class="form-group">{{ form.i_quantity }}</div> <!-- Campo para la cantidad del ítem -->
-            <button type="submit" class="btn btn-primary">Aceptar</button> <!-- Botón para enviar el formulario -->
+            {% csrf_token %}
+            <!-- Token CSRF para proteger el formulario contra ataques CSRF -->
+            <div class="form-group">{{ form.s_name }}</div>
+            <!-- Campo para el nombre del ítem -->
+            <div class="form-group">{{ form.d_price }}</div>
+            <!-- Campo para el precio del ítem -->
+            <div class="form-group">{{ form.i_quantity }}</div>
+            <!-- Campo para la cantidad del ítem -->
+            <button type="submit" class="btn btn-primary">Aceptar</button>
+            <!-- Botón para enviar el formulario -->
           </form>
         </div>
         <div class="col-md-8">
@@ -36,12 +41,14 @@
           <!-- Lista de elementos -->
           <ul class="list-group">
             {% for item in items %}
+            <!-- Si el elemento está marcado, aplica la clase CSS 'checked' -->
             <li
-              class="list-group-item {% if item.b_checked %}checked{% endif %}" <!-- Si el elemento está marcado, aplica la clase CSS 'checked' -->
+              class="list-group-item {% if item.b_checked %}checked{% endif %}"
             >
               <!-- Formulario para cambiar el estado de verificación del elemento -->
               <form method="post" action="{% url 'toggle_check' item.pk %}">
-                {% csrf_token %} <!-- Token CSRF -->
+                {% csrf_token %}
+                <!-- Token CSRF -->
                 <!-- Checkbox para marcar o desmarcar el elemento -->
                 <input
                   type="checkbox"
